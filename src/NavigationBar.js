@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
-import { MenuItem } from 'react-bootstrap';
+import { MenuItem, Glyphicon } from 'react-bootstrap';
 
 
 class NavigationBar extends Component {
@@ -31,8 +31,8 @@ class NavigationBar extends Component {
     }else {
       isloggedin=(
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">Login</NavItem>
-          <NavItem eventKey={2} href="#">Registrarse</NavItem>
+          <NavItem eventKey={1} href="#"><Glyphicon glyph="ok" />  Login</NavItem>
+          <NavItem eventKey={2} href="#"><Glyphicon glyph="log-in" />  Registrarse</NavItem>
         </Nav>
       )
     }
@@ -45,16 +45,10 @@ class NavigationBar extends Component {
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
-
             <Navbar.Collapse>
-              <Nav>
-                /*"Elementos a la izquierda"
-                <NavItem eventKey={1} href="#">Link</NavItem>
-                <NavItem eventKey={2} href="#">{this.state.name}</NavItem>*/
-              </Nav>
                 {isloggedin} //"Depende del estado de logedin"
             </Navbar.Collapse>
-      </Navbar>
+          </Navbar>
       </div>
     );
   }

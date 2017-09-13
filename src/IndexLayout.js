@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import fire from './fire';
 import NavigationBar from './NavigationBar';
 
 class IndexLayout extends Component {
